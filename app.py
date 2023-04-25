@@ -78,3 +78,8 @@ left_column.markdown('**_' + item1 + '_ (Monthly Average)**')
 right_column.markdown('**_' + item2 + '_ (Monthly Average)**')
 left_column.altair_chart(line1, use_container_width=True)
 right_column.altair_chart(line2, use_container_width=True)
+
+
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
